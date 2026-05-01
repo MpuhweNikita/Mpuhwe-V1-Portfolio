@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Github, Linkedin, Mail, MapPin, Send, Twitter } from "lucide-react";
+import { Github, Linkedin, Mail, MapPin, Send, Twitter, Phone, Clock } from "lucide-react";
 import { useForm } from "react-hook-form";
 
 type FormValues = {
@@ -84,11 +84,42 @@ export function Contact() {
               <div>
                 <p className="text-xs font-bold uppercase tracking-widest text-gray-400">Email Me</p>
                 <a
-                  href="mailto:hello@mpuhwe.dev"
+                  href="mailto:mpuhwenikita@gmail.com"
                   className="mt-1 block text-xl font-bold text-gray-900 transition-colors group-hover:text-blue-600"
                 >
-                  hello@mpuhwe.dev
+                  mpuhwenikita@gmail.com
                 </a>
+              </div>
+            </motion.div>
+
+            <motion.div 
+              whileHover={{ x: 8 }}
+              className="group flex items-start gap-5 rounded-3xl border border-gray-100 bg-gray-50/50 p-8 transition-all hover:bg-white hover:shadow-xl hover:shadow-blue-500/10"
+            >
+              <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl bg-blue-600 text-white shadow-lg shadow-blue-500/30">
+                <Phone className="h-6 w-6" />
+              </div>
+              <div>
+                <p className="text-xs font-bold uppercase tracking-widest text-gray-400">Phone</p>
+                <a
+                  href="tel:0792535020"
+                  className="mt-1 block text-xl font-bold text-gray-900 transition-colors group-hover:text-blue-600"
+                >
+                  0792535020
+                </a>
+              </div>
+            </motion.div>
+
+            <motion.div 
+              whileHover={{ x: 8 }}
+              className="group flex items-start gap-5 rounded-3xl border border-gray-100 bg-gray-50/50 p-8 transition-all hover:bg-white hover:shadow-xl hover:shadow-blue-500/10"
+            >
+              <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl bg-blue-600 text-white shadow-lg shadow-blue-500/30">
+                <Clock className="h-6 w-6" />
+              </div>
+              <div>
+                <p className="text-xs font-bold uppercase tracking-widest text-gray-400">Working Hours</p>
+                <p className="mt-1 text-xl font-bold text-gray-900">Mon - Sat, 8AM - 6PM</p>
               </div>
             </motion.div>
 
