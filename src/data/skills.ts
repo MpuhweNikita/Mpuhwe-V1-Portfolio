@@ -60,10 +60,9 @@ export const skillCategories: SkillCategory[] = [
     items: [
       { name: "Node.js", icon: Server, proficiency: 80 },
       { name: "Express", icon: Server, proficiency: 78 },
-      { name: "Django", icon: Database, proficiency: 74 },
-      { name: "Flask", icon: Database, proficiency: 75 },
-      { name: "REST APIs", icon: Database, proficiency: 86 },
-      { name: "GraphQL", icon: Database, proficiency: 69 },
+      { name: "MySQL", icon: Database, proficiency: 94 },
+      { name: "PostgreSQL", icon: Database, proficiency: 86 },
+      { name: "Prism", icon: Database, proficiency: 69 },
     ],
   },
   {
@@ -74,10 +73,7 @@ export const skillCategories: SkillCategory[] = [
       { name: "Vercel", icon: Cloud, proficiency: 86 },
       { name: "Figma", icon: Figma, proficiency: 77 },
       { name: "Postman", icon: TestTube2, proficiency: 83 },
-      { name: "Testing libs", icon: TestTube2, proficiency: 72 },
-      { name: "AWS", icon: Cloud, proficiency: 70 },
-      { name: "Firebase", icon: Cloud, proficiency: 79 },
-      { name: "Docker", icon: Box, proficiency: 71 },
+      { name: "Docker", icon: Box, proficiency: 51 },
     ],
   },
 ];
