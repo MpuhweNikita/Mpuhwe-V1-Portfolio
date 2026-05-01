@@ -7,23 +7,22 @@ import { skillCategories } from "@/data/skills";
 
 function SkillCard({ skill, si }: { skill: SkillItem; si: number }) {
   const Icon = skill.icon;
-  const gradId = useId().replace(/:/g, "");
   const circumference = 97.4;
   const offset = circumference - (skill.proficiency / 100) * circumference;
 
   return (
     <motion.li
-      initial={{ opacity: 0, scale: 0.95 }}
-      whileInView={{ opacity: 1, scale: 1 }}
+      initial={{ opacity: 0, y: 10 }}
+      whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
-      transition={{ delay: si * 0.02 }}
+      transition={{ delay: si * 0.03 }}
       whileHover={{ y: -4 }}
       className="group relative"
     >
-      <div className="relative flex items-center gap-3 overflow-hidden rounded-xl border border-white/10 bg-white/[0.03] px-3 py-3 transition hover:border-accent/35 hover:shadow-glow-sm">
-        <span className="relative flex h-11 w-11 shrink-0 items-center justify-center">
+      <div className="flex items-center gap-4 rounded-xl border border-gray-100 bg-white px-5 py-4 transition-all duration-200 hover:border-blue-200 hover:shadow-[0_10px_30px_rgba(0,0,0,0.03)]">
+        <span className="relative flex h-12 w-12 shrink-0 items-center justify-center">
           <svg
-            className="absolute h-11 w-11 -rotate-90 text-white/10 transition group-hover:text-accent/40"
+            className="absolute h-12 w-12 -rotate-90 text-gray-100"
             viewBox="0 0 36 36"
             aria-hidden
           >
@@ -33,37 +32,30 @@ function SkillCard({ skill, si }: { skill: SkillItem; si: number }) {
               r="15.5"
               fill="none"
               stroke="currentColor"
-              strokeWidth="2"
+              strokeWidth="2.5"
             />
             <motion.circle
               cx="18"
               cy="18"
               r="15.5"
               fill="none"
-              stroke={`url(#${gradId})`}
-              strokeWidth="2"
+              stroke="#60A5FA"
+              strokeWidth="2.5"
               strokeLinecap="round"
               strokeDasharray={circumference}
               initial={{ strokeDashoffset: circumference }}
               whileInView={{ strokeDashoffset: offset }}
               viewport={{ once: true, margin: "-40px" }}
-              transition={{ duration: 1.2, delay: 0.08 + si * 0.04, ease: "easeOut" }}
-              className="transition group-hover:opacity-100"
+              transition={{ duration: 1.2, delay: 0.1 + si * 0.05, ease: "easeOut" }}
             />
-            <defs>
-              <linearGradient id={gradId} x1="0%" y1="0%" x2="100%" y2="0%">
-                <stop offset="0%" stopColor="#00f5d4" />
-                <stop offset="100%" stopColor="#a855f7" />
-              </linearGradient>
-            </defs>
           </svg>
-          <Icon className="relative z-10 h-5 w-5 text-accent transition group-hover:scale-110" />
+          <Icon className="relative z-10 h-5 w-5 text-[#2563EB]" />
         </span>
-        <div className="flex flex-1 items-center justify-between gap-2">
-          <span className="text-sm font-medium text-neutral-200 group-hover:text-white">
+        <div className="flex flex-1 flex-col">
+          <span className="text-sm font-bold text-gray-900 group-hover:text-[#2563EB] transition-colors">
             {skill.name}
           </span>
-          <span className="text-xs font-bold text-accent">{skill.proficiency}%</span>
+          <span className="text-[10px] font-black text-[#60A5FA] uppercase tracking-widest">{skill.proficiency}%</span>
         </div>
       </div>
     </motion.li>
@@ -72,40 +64,39 @@ function SkillCard({ skill, si }: { skill: SkillItem; si: number }) {
 
 export function Skills() {
   return (
-    <section id="skills" className="relative scroll-mt-24 py-24 lg:py-32">
+    <section id="skills" className="relative scroll-mt-24 bg-white py-32 lg:py-40">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-80px" }}
-          className="mb-14 text-center"
+          className="mb-20 text-center"
         >
-          <p className="mb-2 text-sm font-semibold uppercase tracking-widest text-accent">
-            Stack
+          <p className="mb-4 text-sm font-bold uppercase tracking-[0.3em] text-accent">
+            Expertise
           </p>
-          <h2 className="font-display text-3xl font-bold tracking-tight text-white sm:text-4xl">
-            Skills &amp; Technologies
+          <h2 className="font-urbanist text-5xl font-black tracking-tight text-primary sm:text-6xl">
+            Skills & Tools
           </h2>
-          <p className="mx-auto mt-4 max-w-2xl text-neutral-400">
-            Tools I use to ship polished products—from interface layer to APIs and
-            cloud basics.
+          <p className="mx-auto mt-6 max-w-2xl text-lg text-text-secondary font-medium">
+            My technical arsenal for building high-end digital products.
           </p>
         </motion.div>
 
-        <div className="grid gap-10 md:grid-cols-2 xl:grid-cols-3">
+        <div className="grid gap-12 md:grid-cols-2">
           {skillCategories.map((cat, ci) => (
             <motion.div
               key={cat.title}
-              initial={{ opacity: 0, y: 28 }}
+              initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-40px" }}
-              transition={{ delay: ci * 0.06, duration: 0.45 }}
-              className="rounded-2xl border border-white/10 bg-surface-elevated/80 p-6 backdrop-blur-sm"
+              transition={{ delay: ci * 0.1, duration: 0.5 }}
+              className="rounded-3xl border border-gray-50 bg-gray-50/50 p-10"
             >
-              <h3 className="mb-5 font-display text-lg font-bold text-white">
+              <h3 className="mb-10 font-urbanist text-2xl font-black text-primary uppercase tracking-widest text-center">
                 {cat.title}
               </h3>
-              <ul className="grid grid-cols-2 gap-3 sm:grid-cols-2">
+              <ul className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 {cat.items.map((skill, si) => (
                   <SkillCard key={skill.name} skill={skill} si={si} />
                 ))}

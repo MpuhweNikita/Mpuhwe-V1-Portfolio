@@ -41,14 +41,14 @@ export const skillCategories: SkillCategory[] = [
     ],
   },
   {
-    title: "Mobile",
+    title: "mobile",
     items: [
       { name: "React Native", icon: Smartphone, proficiency: 79 },
       { name: "Flutter", icon: Smartphone, proficiency: 67 },
     ],
   },
   {
-    title: "Languages",
+    title: "languages",
     items: [
       { name: "Python", icon: Cpu, proficiency: 78 },
       { name: "Java", icon: Cpu, proficiency: 73 },
@@ -67,22 +67,17 @@ export const skillCategories: SkillCategory[] = [
     ],
   },
   {
-    title: "Cloud & DevOps",
+    title: "tools",
     items: [
-      { name: "AWS", icon: Cloud, proficiency: 70 },
-      { name: "Firebase", icon: Cloud, proficiency: 79 },
-      { name: "Vercel", icon: Cloud, proficiency: 86 },
-      { name: "Docker", icon: Box, proficiency: 71 },
       { name: "Git", icon: GitBranch, proficiency: 88 },
-    ],
-  },
-  {
-    title: "Tools",
-    items: [
-      { name: "Figma", icon: Figma, proficiency: 77 },
       { name: "GitHub", icon: GitBranch, proficiency: 90 },
+      { name: "Vercel", icon: Cloud, proficiency: 86 },
+      { name: "Figma", icon: Figma, proficiency: 77 },
       { name: "Postman", icon: TestTube2, proficiency: 83 },
       { name: "Testing libs", icon: TestTube2, proficiency: 72 },
+      { name: "AWS", icon: Cloud, proficiency: 70 },
+      { name: "Firebase", icon: Cloud, proficiency: 79 },
+      { name: "Docker", icon: Box, proficiency: 71 },
     ],
   },
 ];
