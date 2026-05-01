@@ -9,13 +9,13 @@ const testimonials = [
   {
     name: "IZERE Joshua",
     role: "CEO of BranlyCode",
-    quote: "Working together felt effortless. Every interaction was polished, fast, and user-focused from day one.",
+    quote: "Mpuhwe is a passionate and dedicated programmer who consistently produces high-quality work. She is eager to learn, adapts quickly, and is a valuable addition to any software development team.",
     image: "/joshua.jpeg",
   },
   {
     name: "TWARIMITWE Aaron",
     role: "10X Engineer",
-    quote: "He turns rough ideas into interfaces that feel premium. Great attention to detail and delivery speed.",
+    quote: "Mpuhwe turns rough ideas into interfaces that feel premium. Great attention to detail and delivery speed.",
     image: "/aaron.jpeg",
   },
   {
@@ -26,14 +26,14 @@ const testimonials = [
   },
   {
     name: "Keza Delice",
-    role: "Frontend Teammate",
-    quote: "Clean architecture, thoughtful motion, and performance-first decisions all the way through.",
+    role: "Frontend Developer",
+    quote: "Clean architecture, thoughtful motion, and performance-first decisions all the way through is what Mpuhwe does.",
     image: "/delice.png",
   },
   {
     name: "CYIZERE Happy",
     role: "Frontend Architect",
-    quote: "Working with her was a positive experience. She brings strong teamwork skills, communicates well, and shows real dedication to her work. Her passion is evident in the way she approaches tasks, and she always makes sure to see things through properly.",
+    quote: "Working with her was a positive experience. She brings strong teamwork skills, communicates well, and shows real dedication to her work. Her passion is evident in the way she approaches tasks,and she always makes sure to see things through properly.",
     image: "/happy.jpg",
   },
 ];
