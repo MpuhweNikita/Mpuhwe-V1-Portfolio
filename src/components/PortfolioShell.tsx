@@ -9,6 +9,7 @@ import { Education } from "./Education";
 import { Experience } from "./Experience";
 import { Footer } from "./Footer";
 import { Hero } from "./Hero";
+import { HireMe } from "./HireMe";
 import { Navbar } from "./Navbar";
 import { Projects } from "./Projects";
 import { Skills } from "./Skills";
@@ -68,6 +69,7 @@ export function PortfolioShell() {
           <About />
           <Skills />
           <Projects />
+          <HireMe />
           <Experience />
           <Education />
           <Testimonials />

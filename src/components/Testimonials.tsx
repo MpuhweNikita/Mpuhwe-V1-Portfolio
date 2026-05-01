@@ -7,34 +7,34 @@ import Image from "next/image";
 
 const testimonials = [
   {
-    name: "Aline Uwase",
-    role: "Product Designer",
+    name: "IZERE Joshua",
+    role: "CEO of BranlyCode",
     quote: "Working together felt effortless. Every interaction was polished, fast, and user-focused from day one.",
-    image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=200&q=80",
+    image: "/joshua.jpeg",
   },
   {
-    name: "Eric Nshimiyimana",
-    role: "Startup Founder",
+    name: "TWARIMITWE Aaron",
+    role: "10X Engineer",
     quote: "He turns rough ideas into interfaces that feel premium. Great attention to detail and delivery speed.",
-    image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=200&q=80",
+    image: "/aaron.jpeg",
   },
   {
-    name: "Diane Mukamana",
+    name: "UWASE UTUJE Sandrine",
     role: "Project Manager",
-    quote: "Strong communicator and reliable execution. The final product quality consistently exceeded expectations.",
-    image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=200&q=80",
+    quote: "I highly recommend Nikita for any senior Frontend Role. She is a 10x developer who builds robust and maintainable architectures. Beyond her technical skills, she is a strategic thinker who understands the full web and mobile stack. Nikita is a high-impact engineer and a true asset to any team.",
+    image: "/sandy.jpg",
   },
   {
-    name: "Jean Claude",
+    name: "Keza Delice",
     role: "Frontend Teammate",
     quote: "Clean architecture, thoughtful motion, and performance-first decisions all the way through.",
-    image: "https://images.unsplash.com/photo-1531427186611-ecfd6d936c79?w=200&q=80",
+    image: "/delice.png",
   },
   {
-    name: "Sandrine",
-    role: "Client",
-    quote: "The experience felt modern and human. We received positive feedback immediately after launch.",
-    image: "https://images.unsplash.com/photo-1580489944761-15a19d654956?w=200&q=80",
+    name: "CYIZERE Happy",
+    role: "Frontend Architect",
+    quote: "Working with her was a positive experience. She brings strong teamwork skills, communicates well, and shows real dedication to her work. Her passion is evident in the way she approaches tasks, and she always makes sure to see things through properly.",
+    image: "/happy.jpg",
   },
 ];
 
