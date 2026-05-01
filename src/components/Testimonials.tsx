@@ -127,12 +127,6 @@ export function Testimonials() {
                     </p>
                   </div>
 
-                  {/* Education Badge */}
-                  <div className="absolute bottom-5 left-1/2 -translate-x-1/2">
-                    <div className="bg-black text-white text-[8px] font-black px-4 py-1.5 rounded-full uppercase tracking-[0.3em] shadow-xl border border-white/10">
-                      Education
-                    </div>
-                  </div>
                 </motion.article>
               </div>
             );

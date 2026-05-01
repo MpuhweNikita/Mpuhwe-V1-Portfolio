@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { ArrowLeft, ArrowRight, ExternalLink, Github } from "lucide-react";
+import { ArrowLeft, ArrowRight, ExternalLink, Github, Clock } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { useMemo, useState } from "react";
@@ -132,15 +132,22 @@ export default function ProjectsPage() {
 
                   <div className="mt-8 flex gap-3">
                     {project.liveUrl && (
-                      <a
-                        href={project.liveUrl}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="flex-1 inline-flex items-center justify-center gap-2 rounded-xl border border-gray-200 py-3 text-xs font-bold text-[#0F172A] transition-all hover:bg-gray-50 hover:border-gray-300"
-                      >
-                        <ExternalLink className="h-4 w-4" />
-                        Live
-                      </a>
+                      project.liveUrl.startsWith("http") ? (
+                        <a
+                          href={project.liveUrl}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="flex-1 inline-flex items-center justify-center gap-2 rounded-xl border border-gray-200 py-3 text-xs font-bold text-[#0F172A] transition-all hover:bg-gray-50 hover:border-gray-300"
+                        >
+                          <ExternalLink className="h-4 w-4" />
+                          Live
+                        </a>
+                      ) : (
+                        <div className="flex-1 inline-flex items-center justify-center gap-2 rounded-xl border border-gray-100 bg-gray-50 py-3 text-[10px] font-bold text-gray-400 cursor-default">
+                          <Clock className="h-3 w-3" />
+                          No Live Link
+                        </div>
+                      )
                     )}
                     <button
                       type="button"

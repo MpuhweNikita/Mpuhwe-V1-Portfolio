@@ -1,7 +1,7 @@
 "use client";
 
 import { AnimatePresence, motion } from "framer-motion";
-import { ExternalLink, Github, X, ImageIcon } from "lucide-react";
+import { ExternalLink, Github, X, ImageIcon, Clock } from "lucide-react";
 import Image from "next/image";
 import { useEffect } from "react";
 import type { Project } from "@/data/projects";
@@ -117,15 +117,22 @@ export function ProjectModal({ project, onClose }: ProjectModalProps) {
                   {/* Links */}
                   <div className="mt-10 flex flex-wrap gap-4 pt-10 border-t border-slate-100">
                     {project.liveUrl && (
-                      <a
-                        href={project.liveUrl}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="inline-flex flex-1 items-center justify-center gap-2 rounded-full bg-[#2563EB] px-6 py-3.5 text-sm font-bold text-white shadow-sm transition-all duration-150 hover:bg-blue-600 hover:scale-[1.02] sm:flex-none"
-                      >
-                        <ExternalLink className="h-4 w-4" />
-                        View Live Site
-                      </a>
+                      project.liveUrl.startsWith("http") ? (
+                        <a
+                          href={project.liveUrl}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="inline-flex flex-1 items-center justify-center gap-2 rounded-full bg-[#2563EB] px-6 py-3.5 text-sm font-bold text-white shadow-sm transition-all duration-150 hover:bg-blue-600 hover:scale-[1.02] sm:flex-none"
+                        >
+                          <ExternalLink className="h-4 w-4" />
+                          View Live Site
+                        </a>
+                      ) : (
+                        <div className="inline-flex flex-1 items-center justify-center gap-2 rounded-full border border-slate-200 bg-slate-50 px-6 py-3.5 text-sm font-bold text-slate-400 sm:flex-none cursor-default">
+                          <Clock className="h-4 w-4" />
+                          {project.liveUrl}
+                        </div>
+                      )
                     )}
                     {project.githubUrl && (
                       <a
