@@ -25,10 +25,8 @@ section {
 
 /* Tech grid overlay */
 .tech-grid {
-  background-image: linear-gradient(
-      rgba(255, 255, 255, 0.03) 1px,
-      transparent 1px
-    ),
+  background-image: linear-gradient(rgba(255, 255, 255, 0.03) 1px,
+      transparent 1px),
     linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
   background-size: 64px 64px;
 }
@@ -118,9 +116,11 @@ section {
 ::-webkit-scrollbar {
   width: 8px;
 }
+
 ::-webkit-scrollbar-track {
   @apply bg-gray-100;
 }
+
 ::-webkit-scrollbar-thumb {
   @apply rounded-full bg-gray-400 hover:bg-gray-500;
 }
@@ -135,6 +135,7 @@ section {
   from {
     transform: scale(1);
   }
+
   to {
     transform: scale(1.05);
   }
@@ -144,6 +145,7 @@ section {
   from {
     transform: translate(0, 0);
   }
+
   to {
     transform: translate(30px, 18px);
   }
@@ -153,6 +155,7 @@ section {
   from {
     transform: translate(0, 0);
   }
+
   to {
     transform: translate(-26px, -16px);
   }
@@ -162,6 +165,7 @@ section {
   from {
     transform: translateY(0);
   }
+
   to {
     transform: translateY(-45px);
   }
@@ -171,17 +175,32 @@ section {
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
 }
 
 @keyframes rectangularOrbit {
-  0% { transform: translate(-50%, -50%) translate(-350px, -220px); }
-  25% { transform: translate(-50%, -50%) translate(350px, -220px); }
-  50% { transform: translate(-50%, -50%) translate(350px, 220px); }
-  75% { transform: translate(-50%, -50%) translate(-350px, 220px); }
-  100% { transform: translate(-50%, -50%) translate(-350px, -220px); }
+  0% {
+    transform: translate(-50%, -50%) translate(-350px, -220px);
+  }
+
+  25% {
+    transform: translate(-50%, -50%) translate(350px, -220px);
+  }
+
+  50% {
+    transform: translate(-50%, -50%) translate(350px, 220px);
+  }
+
+  75% {
+    transform: translate(-50%, -50%) translate(-350px, 220px);
+  }
+
+  100% {
+    transform: translate(-50%, -50%) translate(-350px, -220px);
+  }
 }
 
 /* Rectangular orbit animation */
@@ -190,6 +209,6 @@ section {
 }
 
 .orbit-paused .orbit-item,
-.orbit-paused .orbit-item > * {
+.orbit-paused .orbit-item>* {
   animation-play-state: paused;
 }

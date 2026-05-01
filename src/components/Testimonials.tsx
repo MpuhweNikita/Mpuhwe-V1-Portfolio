@@ -73,7 +73,7 @@ export function Testimonials() {
           <div className="absolute inset-0 flex items-center justify-center pointer-events-none z-0">
             {/* Center Fill */}
             <div className="absolute w-40 h-40 bg-blue-500/20 rotate-45 border-dashed border border-blue-500/50 rounded-3xl" />
-            
+
             {/* Thin Diamond Layers */}
             <div className="absolute w-64 h-64 border-[0.5px] border-blue-200/30 rotate-45 rounded-[2rem] bg-blue-600/20" />
             <div className="absolute w-80 h-80 border-[0.5px] border border-blue-200/20 rotate-45 rounded-[2.5rem]" />
@@ -102,11 +102,11 @@ export function Testimonials() {
                 >
                   {/* The specific "Sandrine" cutout shape */}
                   <div className="absolute top-0 left-0 w-32 h-32 bg-white rounded-br-[3.5rem] z-10 overflow-hidden shadow-sm">
-                    <Image 
-                      src={item.image} 
-                      alt={item.name} 
-                      fill 
-                      className="object-cover" 
+                    <Image
+                      src={item.image}
+                      alt={item.name}
+                      fill
+                      className="object-cover"
                       sizes="128px"
                     />
                   </div>
@@ -120,7 +120,7 @@ export function Testimonials() {
                       ))}
                     </div>
                   </div>
-                  
+
                   <div className="px-8 pt-2 pb-14">
                     <p className="font-urbanist text-[13px] font-medium leading-relaxed text-slate-300 italic opacity-90">
                       &ldquo;{item.quote}&rdquo;

@@ -84,7 +84,7 @@ export function Hero() {
   return (
     <section
       id="home"
-      className="relative flex min-h-screen items-center overflow-hidden pt-16 bg-white"
+      className="relative flex min-h-screen items-center overflow-hidden pt-6 bg-white"
     >
       <div className="pointer-events-none absolute inset-0 bg-gradient-to-br from-blue-50/30 via-white to-blue-50/20" />
       <div className="pointer-events-none absolute -left-32 top-1/4 h-96 w-96 rounded-full bg-blue-500/10 blur-[100px]" />
@@ -92,7 +92,7 @@ export function Hero() {
       <div className="pointer-events-none absolute inset-0 tech-grid opacity-40" />
 
       <motion.div
-        className="pointer-events-none absolute left-[8%] top-[22%] hidden lg:block"
+        className="pointer-events-none absolute left-[8%] top-[10%] z-30 hidden lg:block"
         animate={{ y: [0, -14, 0] }}
         transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
       >
@@ -108,12 +108,12 @@ export function Hero() {
         <div className="h-14 w-14 rotate-12 rounded-lg border border-blue-200 bg-blue-50" />
       </motion.div>
 
-      <div className="relative z-10 mx-auto grid max-w-7xl flex-1 grid-cols-1 items-center gap-12 px-4 py-20 lg:grid-cols-2 lg:gap-16 lg:px-8">
+      <div className="relative z-10 mx-auto grid max-w-7xl flex-1 grid-cols-1 items-center gap-12 px-4 py-8 lg:grid-cols-2 lg:gap-16 lg:px-8">
         <motion.div
           variants={container}
           initial="hidden"
           animate="show"
-          className="max-w-xl"
+          className="relative z-20 max-w-xl"
         >
           <motion.p
             variants={item}
@@ -169,7 +169,7 @@ export function Hero() {
           initial={{ opacity: 0, scale: 0.92 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.7, delay: 0.2, ease: [0.22, 1, 0.36, 1] }}
-          className="relative mx-auto flex max-w-md justify-center lg:mx-0 lg:max-w-none lg:justify-end"
+          className="relative z-10 mx-auto flex max-w-md justify-center lg:mx-0 lg:max-w-none lg:justify-end"
         >
           <div className="relative">
             <motion.div
@@ -215,7 +215,7 @@ export function Hero() {
                   <span className="h-2.5 w-2.5 rounded-full bg-emerald-500/80" />
                 </div>
                 <Image
-                  src="/profile.png"
+                  src="/profile.jpg"
                   alt="Mpuhwe — professional portrait"
                   width={480}
                   height={600}
@@ -226,7 +226,7 @@ export function Hero() {
               </div>
             </div>
             <motion.div
-              className="absolute -bottom-4 -right-4 rounded-2xl border border-gray-200 bg-white px-4 py-3 shadow-xl"
+              className="absolute -bottom-4 -right-4 z-20 rounded-2xl border border-gray-200 bg-white px-4 py-3 shadow-xl"
               initial={{ opacity: 0, y: 16 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.8 }}

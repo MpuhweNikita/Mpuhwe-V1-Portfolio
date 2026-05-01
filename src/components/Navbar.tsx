@@ -11,13 +11,13 @@ const navLinks: {
   label: string;
   Icon: ComponentType<{ className?: string }>;
 }[] = [
-  { id: "home", label: "Home", Icon: Home },
-  { id: "about", label: "What I Do", Icon: UserRound },
-  { id: "skills", label: "Skills", Icon: Code2 },
-  { id: "projects", label: "Projects", Icon: Briefcase },
-  { id: "education", label: "Education", Icon: GraduationCap },
-  { id: "contact", label: "Chat", Icon: Mail },
-];
+    { id: "home", label: "Home", Icon: Home },
+    { id: "about", label: "What I Do", Icon: UserRound },
+    { id: "skills", label: "Skills", Icon: Code2 },
+    { id: "projects", label: "Projects", Icon: Briefcase },
+    { id: "education", label: "Education", Icon: GraduationCap },
+    { id: "contact", label: "Chat", Icon: Mail },
+  ];
 
 type NavbarProps = { activeSection: SectionId };
 
@@ -50,11 +50,10 @@ export function Navbar({ activeSection }: NavbarProps) {
             <motion.span
               whileHover={{ y: -2, scale: 1.03 }}
               whileTap={{ scale: 0.95 }}
-              className={`relative flex h-14 w-full max-w-[5.5rem] items-center justify-center rounded-xl transition ${
-                activeSection === id
+              className={`relative flex h-14 w-full max-w-[5.5rem] items-center justify-center rounded-xl transition ${activeSection === id
                   ? "text-blue-600"
                   : "text-gray-600 group-hover:text-gray-900"
-              }`}
+                }`}
             >
               <Icon className="h-[1.15rem] w-[1.15rem]" />
               {(hovered === id || activeSection === id) && (
@@ -76,9 +75,8 @@ export function Navbar({ activeSection }: NavbarProps) {
                 />
               )}
               <span
-                className={`absolute -bottom-0.5 h-2.5 w-2.5 rotate-45 rounded-[2px] transition ${
-                  activeSection === id ? "bg-blue-600/90" : "bg-transparent"
-                }`}
+                className={`absolute -bottom-0.5 h-2.5 w-2.5 rotate-45 rounded-[2px] transition ${activeSection === id ? "bg-blue-600/90" : "bg-transparent"
+                  }`}
               />
             </motion.span>
           </button>
