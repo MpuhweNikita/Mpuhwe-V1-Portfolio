@@ -20,7 +20,7 @@ const testimonials = [
   },
   {
     name: "UWASE UTUJE Sandrine",
-    role: "Project Manager",
+    role: "10X Engineer",
     quote: "I highly recommend Nikita for any senior Frontend Role. She is a 10x developer who builds robust and maintainable architectures. Beyond her technical skills, she is a strategic thinker who understands the full web and mobile stack. Nikita is a high-impact engineer and a true asset to any team.",
     image: "/sandy.jpg",
   },
@@ -32,7 +32,7 @@ const testimonials = [
   },
   {
     name: "CYIZERE Happy",
-    role: "Frontend Architect",
+    role: "Full-stack Architect",
     quote: "Working with her was a positive experience. She brings strong teamwork skills, communicates well, and shows real dedication to her work. Her passion is evident in the way she approaches tasks,and she always makes sure to see things through properly.",
     image: "/happy.jpg",
   },
