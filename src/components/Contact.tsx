@@ -1,8 +1,9 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Github, Linkedin, Mail, MapPin, Send, Twitter, Phone, Clock } from "lucide-react";
+import { Github, Linkedin, Mail, MapPin, Send, Twitter, Phone, Clock, CheckCircle, AlertCircle } from "lucide-react";
 import { useForm } from "react-hook-form";
+import { useState } from "react";
 
 type FormValues = {
   name: string;
@@ -16,6 +17,9 @@ const socials = [
 ];
 
 export function Contact() {
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
+
   const {
     register,
     handleSubmit,
@@ -23,12 +27,32 @@ export function Contact() {
     formState: { errors },
   } = useForm<FormValues>();
 
-  const onSubmit = (data: FormValues) => {
-    console.log("Contact form (placeholder):", data);
-    alert(
-      "Thanks for reaching out! This is a demo submit—connect your backend or Formspree to send real messages."
-    );
-    reset();
+  const onSubmit = async (data: FormValues) => {
+    setIsSubmitting(true);
+    setSubmitStatus('idle');
+    try {
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(data),
+      });
+
+      if (!response.ok) {
+        throw new Error('Failed to send message');
+      }
+
+      setSubmitStatus('success');
+      reset();
+      // Reset status after 5 seconds
+      setTimeout(() => setSubmitStatus('idle'), 5000);
+    } catch (error) {
+      console.error('Submission error:', error);
+      setSubmitStatus('error');
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -219,13 +243,41 @@ export function Contact() {
               </div>
               <motion.button
                 type="submit"
-                whileHover={{ scale: 1.02 }}
-                whileTap={{ scale: 0.98 }}
-                className="mt-8 flex w-full items-center justify-center gap-3 rounded-2xl bg-blue-600 py-5 text-sm font-bold text-white shadow-xl shadow-blue-500/20 transition-all hover:bg-blue-700 hover:shadow-blue-500/40"
+                disabled={isSubmitting}
+                whileHover={{ scale: isSubmitting ? 1 : 1.02 }}
+                whileTap={{ scale: isSubmitting ? 1 : 0.98 }}
+                className={`mt-8 flex w-full items-center justify-center gap-3 rounded-2xl py-5 text-sm font-bold text-white shadow-xl transition-all ${
+                  isSubmitting 
+                    ? 'bg-blue-400 cursor-not-allowed' 
+                    : 'bg-blue-600 hover:bg-blue-700 shadow-blue-500/20 hover:shadow-blue-500/40'
+                }`}
               >
-                <Send className="h-4 w-4" />
-                Send Message
+                {isSubmitting ? (
+                  <div className="h-5 w-5 animate-spin rounded-full border-2 border-white border-t-transparent" />
+                ) : (
+                  <Send className="h-4 w-4" />
+                )}
+                {isSubmitting ? 'Sending...' : 'Send Message'}
               </motion.button>
+
+              {submitStatus === 'success' && (
+                <motion.p 
+                  initial={{ opacity: 0, y: 10 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  className="mt-4 text-center text-sm font-bold text-green-600 flex items-center justify-center gap-2"
+                >
+                  <CheckCircle className="h-4 w-4" /> Message sent successfully!
+                </motion.p>
+              )}
+              {submitStatus === 'error' && (
+                <motion.p 
+                  initial={{ opacity: 0, y: 10 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  className="mt-4 text-center text-sm font-bold text-red-600 flex items-center justify-center gap-2"
+                >
+                  <AlertCircle className="h-4 w-4" /> Failed to send message. Please try again.
+                </motion.p>
+              )}
             </form>
           </motion.div>
         </div>
