@@ -11,9 +11,8 @@ type FormValues = {
 };
 
 const socials = [
-  { href: "https://linkedin.com", label: "LinkedIn", Icon: Linkedin },
-  { href: "https://github.com", label: "GitHub", Icon: Github },
-  { href: "https://x.com", label: "X", Icon: Twitter },
+  { href: "https://www.linkedin.com/in/mpuhwe-nikita-82a80934b/", label: "LinkedIn", Icon: Linkedin },
+  { href: "https://github.com/MpuhweNikita", label: "GitHub", Icon: Github },
 ];
 
 export function Contact() {
