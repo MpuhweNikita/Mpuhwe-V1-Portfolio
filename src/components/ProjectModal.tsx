@@ -149,19 +149,6 @@ export function ProjectModal({ project, onClose }: ProjectModalProps) {
                 </div>
               </div>
 
-              {/* Bottom Row: Additional Gallery Block */}
-              <div className="bg-slate-50 p-8 sm:p-10 lg:p-12 border-t border-slate-100">
-                <h4 className="mb-6 font-display text-2xl font-bold tracking-tight text-slate-900">Gallery & Screenshots</h4>
-                <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-                  {/* Placeholders for future gallery implementations */}
-                  {[1, 2, 3].map((item) => (
-                    <div key={item} className="flex aspect-video w-full flex-col items-center justify-center rounded-2xl border-2 border-dashed border-slate-200 bg-white text-slate-400">
-                      <ImageIcon className="mb-2 h-8 w-8 text-slate-300" />
-                      <span className="text-xs font-semibold uppercase tracking-wider text-slate-400">Placeholder image</span>
-                    </div>
-                  ))}
-                </div>
-              </div>
 
             </div>
           </motion.div>

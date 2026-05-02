@@ -16,11 +16,11 @@ const container = {
 };
 
 const item = {
-  hidden: { opacity: 0, y: 28 },
+  hidden: { opacity: 0, y: 35 },
   show: {
     opacity: 1,
     y: 0,
-    transition: { duration: 0.55, ease: [0.22, 1, 0.36, 1] },
+    transition: { type: "spring", stiffness: 200, damping: 12 },
   },
 };
 
@@ -166,9 +166,9 @@ export function Hero() {
         </motion.div>
 
         <motion.div
-          initial={{ opacity: 0, scale: 0.92 }}
+          initial={{ opacity: 0, scale: 0 }}
           animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.7, delay: 0.2, ease: [0.22, 1, 0.36, 1] }}
+          transition={{ type: "spring", stiffness: 150, damping: 15, delay: 0.2 }}
           className="relative z-10 mx-auto flex max-w-md justify-center lg:mx-0 lg:max-w-none lg:justify-end"
         >
           <div className="relative">

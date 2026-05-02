@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { ArrowLeft, ArrowRight, ExternalLink, Github, Clock } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 import { useMemo, useState } from "react";
 import { projects } from "@/data/projects";
 import type { ProjectCategory } from "@/data/projects";
@@ -19,6 +20,7 @@ const tabs: { id: ProjectCategory; label: string }[] = [
 ];
 
 export default function ProjectsPage() {
+  const router = useRouter();
   const [filter, setFilter] = useState<ProjectCategory>("all");
   const [selected, setSelected] = useState<(typeof projects)[0] | null>(null);
 
@@ -34,13 +36,14 @@ export default function ProjectsPage() {
       <main className="mx-auto max-w-7xl px-4 pt-32 pb-20 sm:px-6 lg:px-8">
         <div className="mb-12 flex flex-col gap-8 lg:flex-row lg:items-end lg:justify-between">
           <div>
-            <Link
-              href="/"
+            <button
+              type="button"
+              onClick={() => router.back()}
               className="mb-8 inline-flex items-center gap-2 rounded-full border border-gray-300 bg-white px-5 py-2.5 text-sm font-bold text-[#0F172A] transition-all hover:bg-gray-50 shadow-sm hover:shadow-md"
             >
               <ArrowLeft className="h-4 w-4" />
               Return Back
-            </Link>
+            </button>
             <h1 className="font-display text-4xl font-bold tracking-tight text-[#0F172A] sm:text-6xl">
               All Projects
             </h1>

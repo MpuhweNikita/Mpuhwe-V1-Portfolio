@@ -1,10 +1,10 @@
 import type { Metadata, Viewport } from "next";
-import { Urbanist } from "next/font/google";
+import { Saira } from "next/font/google";
 import "./globals.css";
 
-const urbanist = Urbanist({
+const saira = Saira({
   subsets: ["latin"],
-  variable: "--font-urbanist",
+  variable: "--font-saira",
   display: "swap",
   weight: ["300", "400", "500", "600", "700", "800", "900"],
 });
@@ -34,7 +34,7 @@ export default function RootLayout({
   return (
     <html lang="en" className="scroll-smooth">
       <body
-        className={`${urbanist.variable} min-h-screen font-urbanist bg-background selection:bg-[#2563EB]/20 selection:text-[#0A1F44]`}
+        className={`${saira.variable} min-h-screen font-saira bg-background selection:bg-[#2563EB]/20 selection:text-[#0A1F44]`}
       >
         {children}
       </body>
