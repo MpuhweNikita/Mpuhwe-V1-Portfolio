@@ -60,6 +60,7 @@ export const skillCategories: SkillCategory[] = [
     items: [
       { name: "Node.js", icon: Server, proficiency: 80 },
       { name: "Express", icon: Server, proficiency: 78 },
+      { name: "NestJS", icon: Server, proficiency: 77 },
       { name: "MySQL", icon: Database, proficiency: 94 },
       { name: "PostgreSQL", icon: Database, proficiency: 86 },
       { name: "Prism", icon: Database, proficiency: 69 },
