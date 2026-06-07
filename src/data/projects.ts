@@ -43,6 +43,18 @@ export const projects: Project[] = [
     results: "Significantly reduced the time recruiters spend screening candidates by automating the initial ranking process.",
   },
   {
+    id: "inzira",
+    title: "Inzira",
+    role: "Fullstack Developer",
+    shortDescription: "An AI-powered Career Development Platform designed to bridge the gap between job seekers and employers by optimizing employability.",
+    longDescription: "Inzira is an AI-powered Career Development Platform designed to bridge the gap between job seekers and employers by optimizing employability through personalized career pathways and smart skill-matching.",
+    category: "full-stack",
+    image: "/project_feature.png",
+    tech: ["Next.js", "NestJS", "AI/ML", "PostgreSQL"],
+    challenges: "Developing robust matchmaking algorithms and ensuring high-performance processing for career optimization profiles.",
+    results: "Designed and built an end-to-end prototype that bridges candidates' skills with actual market demands.",
+  },
+  {
     id: "minelynx",
     title: "MineLynx",
     role: "Embedded Systems Engineer & Assistant Frontend Developer",
