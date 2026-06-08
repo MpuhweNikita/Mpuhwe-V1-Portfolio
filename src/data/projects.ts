@@ -51,6 +51,7 @@ export const projects: Project[] = [
     category: "full-stack",
     image: "/project_feature.png",
     tech: ["Next.js", "NestJS", "AI/ML", "PostgreSQL"],
+    liveUrl: "https://inzira-frontend-1.vercel.app/",
     challenges: "Developing robust matchmaking algorithms and ensuring high-performance processing for career optimization profiles.",
     results: "Designed and built an end-to-end prototype that bridges candidates' skills with actual market demands.",
   },
