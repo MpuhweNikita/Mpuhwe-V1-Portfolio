@@ -107,4 +107,17 @@ export const projects: Project[] = [
     challenges: "Visualizing massive datasets in an accessible and performant way for decision makers.",
     results: "Created intuitive, fast-loading dashboard interfaces that drastically cut down report generation time.",
   },
+  {
+    id: "rca-mis",
+    title: "RCA MIS",
+    role: "Frontend Engineer",
+    shortDescription: "A management information system designed to integrate discipline, students, and staff to manage school operations seamlessly.",
+    longDescription: "RCA MIS is a web platform designed to streamline school operations by integrating student records, staff details, and discipline tracking into one seamless electronic dashboard.",
+    category: "frontend",
+    image: "/project_feature.png",
+    tech: ["React", "Next.js", "Tailwind CSS", "TypeScript"],
+    liveUrl: "https://rca-ms.vercel.app/",
+    challenges: "Designing and implementing intuitive, high-performance dashboards for tracking daily discipline logs and academic records.",
+    results: "Delivered a responsive user interface that simplifies administrative logging and improves data visibility for all users.",
+  },
 ];
