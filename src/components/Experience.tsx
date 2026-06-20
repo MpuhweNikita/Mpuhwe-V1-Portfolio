@@ -7,7 +7,7 @@ const entries = [
   {
     period: "2026 — Present",
     title: "CEO & Founder",
-    org: "Twubake",
+    org: "Ubaka",
     type: "Full-time",
     highlights: [
       "Leading the vision and strategy for a construction materials logistics platform.",
